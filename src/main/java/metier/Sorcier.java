@@ -1,7 +1,14 @@
 package metier;
 
-public class Sorcier {
-	
+import javax.persistence.*;
+@Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+//@DiscriminatorColumn(name="type_sorcier")
+
+public abstract class  Sorcier {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private String nom;
 	private String prenom;
 	private Integer age;
@@ -11,7 +18,8 @@ public class Sorcier {
 	
 	public Sorcier () {}
 	
-	public Sorcier(String nom, String prenom, Integer age, Enum civ, Enum patronus) {
+	public Sorcier(Integer id, String nom, String prenom, Integer age, Enum civ, Enum patronus) {
+		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
@@ -19,6 +27,11 @@ public class Sorcier {
 		this.patronus = patronus;
 	}
 	
+	public Sorcier(String nom, String prenom, Integer age) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+	}
 
 	public String getNom() {
 		return nom;

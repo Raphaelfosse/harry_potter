@@ -3,9 +3,18 @@ package metier;
 
 import java.util.List;
 
+import javax.persistence.*;
+
+@Entity
+
 public class Matiere {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private String nom;
-	private List<Sort> sort; 
+	@OneToMany
+	private List<Sort> sort;
+	@OneToOne
 	private Professeur professeur;
 	
 	public Matiere(){

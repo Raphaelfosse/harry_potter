@@ -1,10 +1,18 @@
 package metier;
 import java.util.*;
+
+import javax.persistence.*;
+@Entity
+
 public class Maison {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private String nom;
 	private Integer score;
+	@OneToOne
 	private Professeur professeur;
+	@OneToMany
 	private List<Eleve> eleves = new ArrayList();
 	
 	

@@ -1,16 +1,22 @@
 package metier;
 
+import javax.persistence.*;
+
+@Entity
+
 public class Sort {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 	private String libelle;
+	@ManyToOne
 	private Matiere matiere;
 	private Enum typeSort;
 	
 	public Sort(){	
 	}
 	
-	public void add (Sort s){
-		
+	public void add (Sort s){	
 	}
 
 	public Sort(String libelle, Matiere matiere, TypeSort typeSort) {
@@ -40,6 +46,15 @@ public class Sort {
 		this.typeSort = typeSort;
 	}
 	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
 		return "sort [libelle=" + libelle + ", typeSort=" + typeSort + "]";
