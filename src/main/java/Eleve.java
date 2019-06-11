@@ -1,19 +1,20 @@
+import java.util.*;
 
 public class Eleve extends Sorcier {
-	private List<Matieres> matiere; 
+	private List<Matiere> matiere; 
 	private Maison maison;
 	
 	public Eleve() {
 	}
 	
-	public Eleve(List<Matieres> matiere, Maison maison) {
+	public Eleve(List<Matiere> matiere, Maison maison) {
 		this.matiere = matiere;
 		this.maison = maison;
 	}
-	public List<Matieres> getMatiere() {
+	public List<Matiere> getMatiere() {
 		return matiere;
 	}
-	public void setMatiere(List<Matieres> matiere) {
+	public void setMatiere(List<Matiere> matiere) {
 		this.matiere = matiere;
 	}
 	public Maison getMaison() {
