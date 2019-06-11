@@ -1,7 +1,6 @@
 
 package metier;
 import java.util.List;
->>>>>>> ccf450aa778e4281731933587245cfc00bbcc817:src/main/java/metier/Matiere.java
 
 public class Matiere {
 	private String nom;
@@ -11,7 +10,6 @@ public class Matiere {
 	public Matiere(){
 		
 	}
-	
 	
 	public Matiere(String nom, List<Sort> sort, Professeur professeur) {
 		this.nom = nom;
