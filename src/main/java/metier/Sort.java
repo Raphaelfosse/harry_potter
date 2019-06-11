@@ -1,3 +1,4 @@
+package metier;
 
 public class Sort {
 	
@@ -6,6 +7,10 @@ public class Sort {
 	private Enum typeSort;
 	
 	public Sort(){	
+	}
+	
+	public void add (Sort s){
+		
 	}
 
 	public Sort(String libelle, Matiere matiere, TypeSort typeSort) {

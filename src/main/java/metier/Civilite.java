@@ -1,3 +1,4 @@
+package metier;
 
 public enum Civilite {
 	Sorcier ("Sorcier"), Sorciere ("Sorciere"), Moldu ("Moldu");
