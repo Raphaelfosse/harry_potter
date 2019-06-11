@@ -5,6 +5,10 @@ import javax.persistence.*;
 import javax.persistence.Persistence;
 import metier.Matiere;
 
+
+import application.Context;
+
+
 public class DAOMatiere implements DAO<Matiere, Integer> {
 
 	@Override
