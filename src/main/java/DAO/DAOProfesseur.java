@@ -7,7 +7,7 @@ import javax.persistence.*;
 import application.Context;
 import metier.*;
 
-public class DAOProfesseur {
+public class DAOProfesseur implements DAO<Professeur, Integer> {
 	
 	public void insert(Professeur object) {
 		EntityManagerFactory emf =Context.getInstance().getEmf();

@@ -1,18 +1,15 @@
 package DAO;
 
 import java.util.List;
-import javax.persistence.*;
-import javax.persistence.Persistence;
-import metier.Matiere;
 
+import javax.persistence.*;
 
 import application.Context;
+import metier.*;
 
+public class DAOSort implements DAO<Sort, Integer> {
 
-public class DAOMatiere implements DAO<Matiere, Integer> {
-
-	@Override
-	public void insert(Matiere object) {
+	public void insert(Sort object) {
 		EntityManagerFactory emf = Context.getInstance().getEmf();
 		EntityManager em = emf.createEntityManager();
 
@@ -21,23 +18,22 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 		em.persist(object);
 
 		em.getTransaction().commit();
+
 		em.close();
-		Context.getInstance().destroy();
+		Context.destroy();
 	}
 
-	@Override
-	public Matiere selectById(Integer id) {
+	public Sort selectById(Integer id) {
 		EntityManagerFactory emf = Context.getInstance().getEmf();
 		EntityManager em = emf.createEntityManager();
 
-		Matiere s = em.find(Matiere.class, id);
+		Sort s = em.find(Sort.class, id);
 		em.close();
-		Context.getInstance().destroy();
+		Context.destroy();
 		return s;
 	}
 
-	@Override
-	public void update(Matiere object) {
+	public void update(Sort object) {
 		EntityManagerFactory emf = Context.getInstance().getEmf();
 		EntityManager em = emf.createEntityManager();
 
@@ -46,14 +42,13 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 		em.merge(object);
 
 		em.getTransaction().commit();
+
 		em.close();
-		Context.getInstance().destroy();
+		Context.destroy();
 
 	}
 
-	@Override
-	public void delete(Matiere object) {
-		// TODO Auto-generated method stub
+	public void delete(Sort object) {
 		EntityManagerFactory emf = Context.getInstance().getEmf();
 		EntityManager em = emf.createEntityManager();
 
@@ -62,20 +57,25 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 		em.remove(object);
 
 		em.getTransaction().commit();
+
 		em.close();
-		Context.getInstance().destroy();
+		Context.destroy();
+
 	}
 
-	@Override
-	public List<Matiere> selectAll() {
+	public List<Sort> selectAll() {
 		EntityManagerFactory emf = Context.getInstance().getEmf();
 		EntityManager em = emf.createEntityManager();
+		
+		Query query= em.createQuery("from Sort");
+		
+		List<Sort> liste = query.getResultList();
 
-		Query query = em.createQuery("from Matiere");
-		List<Matiere> liste = query.getResultList();
 		em.close();
-		Context.getInstance().destroy();
+		Context.destroy();
 		return liste;
 	}
+	
+	
 
 }
