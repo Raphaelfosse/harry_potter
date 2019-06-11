@@ -1,3 +1,4 @@
+package metier;
 import java.util.*;
 public class Maison {
 	
@@ -15,8 +16,6 @@ public class Maison {
 		this.professeur = professeur;
 		this.eleves = eleves;
 	}
-	
-	
 
 	public String getNom() {
 		return nom;
