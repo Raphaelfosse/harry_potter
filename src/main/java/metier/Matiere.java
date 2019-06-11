@@ -1,8 +1,14 @@
+package metier;
+import java.util.List;
 
 public class Matiere {
 	private String nom;
 	private List<Sort> sort; 
 	private Professeur professeur;
+	
+	public Matiere(){
+		
+	}
 	
 	
 	public Matiere(String nom, List<Sort> sort, Professeur professeur) {

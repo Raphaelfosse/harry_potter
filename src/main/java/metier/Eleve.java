@@ -1,3 +1,4 @@
+package metier;
 import java.util.*;
 
 public class Eleve extends Sorcier {
@@ -7,7 +8,8 @@ public class Eleve extends Sorcier {
 	public Eleve() {
 	}
 	
-	public Eleve(List<Matiere> matiere, Maison maison) {
+	public Eleve(String nom, String prenom, Integer age, Enum civ, Enum patronus, List<Matiere> matiere, Maison maison) {
+		super(nom, prenom, age, civ, patronus);
 		this.matiere = matiere;
 		this.maison = maison;
 	}
