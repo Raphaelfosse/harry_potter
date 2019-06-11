@@ -3,7 +3,8 @@ package DAO;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Persistence;
-import metier.Matiere;;
+import metier.Matiere;
+import application.Context;
 
 public class DAOMatiere implements DAO<Matiere, Integer> {
 
