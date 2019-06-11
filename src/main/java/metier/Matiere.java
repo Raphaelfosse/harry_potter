@@ -11,7 +11,6 @@ public class Matiere {
 	public Matiere(){
 	}
 	
-	
 	public Matiere(String nom, List<Sort> sort, Professeur professeur) {
 		this.nom = nom;
 		this.sort = sort;
