@@ -7,7 +7,6 @@ public class Matiere {
 	private Professeur professeur;
 	
 	public Matiere(){
-		
 	}
 	
 	
