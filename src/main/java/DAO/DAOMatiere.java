@@ -67,7 +67,7 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hp");
 		EntityManager em = emf.createEntityManager();
 
-		Query query = em.createQuery("from Grade");
+		Query query = em.createQuery("from Matiere");
 		List<Matiere> liste = query.getResultList();
 		em.close();
 		Context.getInstance().destroy();
