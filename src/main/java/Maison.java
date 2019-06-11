@@ -10,7 +10,6 @@ public class Maison {
 	public Maison(){}
 	
 	public Maison(String nom, Integer score, Professeur professeur, List<Eleve> eleves) {
-		super();
 		this.nom = nom;
 		this.score = score;
 		this.professeur = professeur;
@@ -53,7 +52,7 @@ public class Maison {
 
 	@Override
 	public String toString() {
-		return "Maison [nom=" + nom + ", score=" + score + ", professeur=" + professeur + ", eleves=" + eleves + "]";
+		return "Maison [nom=" + nom + ", score=" + score + "]";
 	}
 	
 	
