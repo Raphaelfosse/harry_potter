@@ -7,9 +7,11 @@ public class Eleve extends Sorcier {
 	}
 	
 	public Eleve(List<Matieres> matiere, Maison maison) {
+		super();
 		this.matiere = matiere;
 		this.maison = maison;
 	}
+
 	public List<Matieres> getMatiere() {
 		return matiere;
 	}

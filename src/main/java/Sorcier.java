@@ -14,7 +14,14 @@ public class Sorcier {
 		return nom;
 	}
 	
-	
+	public Sorcier(String nom, String prenom, Integer age, Enum civ, Enum patronus) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+		this.civ = civ;
+		this.patronus = patronus;
+	}
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
