@@ -45,6 +45,16 @@ public class Maison {
 	public void setScore(Integer score) {
 		this.score = score;
 	}
+	
+	public void addScore(int score) {
+		int scorem = getScore();
+		scorem += score;
+		this.setScore(scorem);
+	}
+	
+//	public void addEleve(List<Eleve> eleves) {
+//		this.setEleve(eleves);
+//	}
 
 	public Professeur getProfesseur() {
 		return professeur;
@@ -64,7 +74,7 @@ public class Maison {
 
 	@Override
 	public String toString() {
-		return "Maison [nom=" + nom + ", score=" + score + "]";
+		return "Maison [nom=" + nom + ", score=" + score + "Prof" + getProfesseur() + "]";
 	}
 	
 	

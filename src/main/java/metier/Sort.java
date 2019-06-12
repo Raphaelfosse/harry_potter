@@ -26,6 +26,11 @@ public class Sort {
 		this.typeSort = typeSort;
 	}
 	
+	public Sort(String libelle, TypeSort typeSort) {
+		this.libelle = libelle;
+		this.typeSort = typeSort;
+	}
+	
 	public String getLibelle() {
 		return libelle;
 	}

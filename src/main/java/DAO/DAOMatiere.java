@@ -22,7 +22,6 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
 	}
 
 	@Override
@@ -32,7 +31,6 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 
 		Matiere s = em.find(Matiere.class, id);
 		em.close();
-		Context.getInstance().destroy();
 		return s;
 	}
 
@@ -47,7 +45,6 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
 
 	}
 
@@ -63,7 +60,6 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
 	}
 
 	@Override
@@ -74,7 +70,6 @@ public class DAOMatiere implements DAO<Matiere, Integer> {
 		Query query = em.createQuery("from Matiere");
 		List<Matiere> liste = query.getResultList();
 		em.close();
-		Context.getInstance().destroy();
 		return liste;
 	}
 

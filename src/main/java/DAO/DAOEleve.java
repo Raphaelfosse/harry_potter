@@ -20,7 +20,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
 	}
 
 	public Eleve selectById(Integer id) {
@@ -29,7 +28,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 
 		Eleve e = em.find(Eleve.class, id);
 		em.close();
-		Context.destroy();
 		return e;
 	}
 
@@ -44,8 +42,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
-
 	}
 
 	public void delete(Eleve object) {
@@ -59,7 +55,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
 
 	}
 
@@ -72,7 +67,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 		List<Eleve> liste = query.getResultList();
 
 		em.close();
-		Context.destroy();
 		return liste;
 	}
 	
@@ -85,7 +79,6 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 		List<Eleve> liste = query.getResultList(); 
 		
 		em.close();
-		Context.getInstance().destroy();
 		return liste;
 	}
 	
