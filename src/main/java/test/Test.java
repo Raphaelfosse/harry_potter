@@ -30,16 +30,11 @@ public class Test {
 		Sort s2 = new Sort();
 		s2.setLibelle("Experiarmus");
 		s2.setTypeSort(TypeSort.Sortilège);
-		
+		s2.setMatiere(m1);
+		s1.setMatiere(m1);
 		daoS.insert(s1);
 		daoS.insert(s2);
 		
-		List<Sort> sorts = new ArrayList();
-		sorts.add(s1);
-		sorts.add(s2);
-		
-		s1.setMatiere(m1);
-		s2.setMatiere(m1);
 		
 		Professeur p1 = new Professeur();
 		p1.setNom("Chourave");
