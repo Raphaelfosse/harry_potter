@@ -12,7 +12,7 @@ public class Maison {
 	private Integer score;
 	@OneToOne
 	private Professeur professeur;
-	@OneToMany
+	@OneToMany(mappedBy="maison")
 	private List<Eleve> eleves = new ArrayList();
 	
 	

@@ -14,7 +14,7 @@ public class Professeur extends Sorcier{
 	public Professeur(){}
 
 	
-	public Professeur(Integer id, String nom, String prenom, Integer age,Matiere matiere, Enum civ, Enum patronus) {
+	public Professeur(Integer id, String nom, String prenom, Integer age,Matiere matiere, Civilite civ, Patronus patronus) {
 		super(id, nom,prenom,age,civ,patronus);
 		this.matiere = matiere;
 	}

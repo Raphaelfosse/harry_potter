@@ -19,7 +19,7 @@ public class Eleve extends Sorcier {
 	public Eleve() {
 	}
 
-	public Eleve(Integer id, String nom, String prenom, Integer age, Enum civ, Enum patronus, List<Matiere> matiere,
+	public Eleve(Integer id, String nom, String prenom, Integer age, Civilite civ, Patronus patronus, List<Matiere> matiere,
 			Maison maison) {
 		super(id, nom, prenom, age, civ, patronus);
 		this.matiere = matiere;
@@ -48,8 +48,7 @@ public class Eleve extends Sorcier {
 
 	@Override
 	public String toString() {
-		return "Eleve [getNom()=" + getNom() + ", getPrenom()=" + getPrenom() + ", getAge()=" + getAge() + ", getCiv()="
-				+ getCiv() + ", getPatronus()=" + getPatronus() + ", toString()=" + super.toString() + "]";
+		return "Titre : " + getCiv() + "Prenom : " + getPrenom() + "Nom : " + getNom() + "Age : " + getAge() + " de la maison " + getMaison() + "Patronus de type: " + getPatronus() + " a choisit les matières suivantes :" + getMatiere() +  " FIN";
 	}
 
 }

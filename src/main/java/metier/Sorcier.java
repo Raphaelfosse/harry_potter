@@ -12,13 +12,15 @@ public abstract class  Sorcier {
 	private String nom;
 	private String prenom;
 	private Integer age;
-	private Enum civ;
-	private Enum patronus;
+	@Enumerated(EnumType.STRING)
+	private Civilite civ;
+	@Enumerated(EnumType.STRING)
+	private Patronus patronus;
 	
 	
 	public Sorcier () {}
 	
-	public Sorcier(Integer id, String nom, String prenom, Integer age, Enum civ, Enum patronus) {
+	public Sorcier(Integer id, String nom, String prenom, Integer age, Civilite civ, Patronus patronus) {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -55,13 +57,13 @@ public abstract class  Sorcier {
 	public Enum getCiv() {
 		return civ;
 	}
-	public void setCiv(Enum civ) {
+	public void setCiv(Civilite civ) {
 		this.civ = civ;
 	}
 	public Enum getPatronus() {
 		return patronus;
 	}
-	public void setPatronus(Enum patronus) {
+	public void setPatronus(Patronus patronus) {
 		this.patronus = patronus;
 	}
 
