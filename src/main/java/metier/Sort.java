@@ -11,7 +11,8 @@ public class Sort {
 	private String libelle;
 	@ManyToOne
 	private Matiere matiere;
-	private Enum typeSort;
+	@Enumerated(EnumType.STRING)
+	private TypeSort typeSort;
 	
 	public Sort(){	
 	}
