@@ -18,6 +18,11 @@ public class Maison {
 	
 	public Maison(){}
 	
+	public Maison(String nom, Integer score){
+		this.nom = nom;
+		this.score = score;
+}
+	
 	public Maison(String nom, Integer score, Professeur professeur, List<Eleve> eleves) {
 		this.nom = nom;
 		this.score = score;
