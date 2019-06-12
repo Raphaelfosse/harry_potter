@@ -12,11 +12,14 @@ public class Professeur extends Sorcier{
 	
 	
 	public Professeur(){}
-
 	
-	public Professeur(Integer id, String nom, String prenom, Integer age,Matiere matiere, Civilite civ, Patronus patronus) {
+	
+	public Professeur(Integer id, String nom, String prenom, Integer age, Civilite civ, Patronus patronus) {
 		super(id, nom,prenom,age,civ,patronus);
-		this.matiere = matiere;
+	}
+	
+	public Professeur( String nom, String prenom, Integer age, Civilite civ, Patronus patronus) {
+		super(nom,prenom,age,civ,patronus);
 	}
 
 

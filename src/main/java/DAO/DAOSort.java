@@ -20,7 +20,6 @@ public class DAOSort implements DAO<Sort, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
 	}
 
 	public Sort selectById(Integer id) {
@@ -29,7 +28,6 @@ public class DAOSort implements DAO<Sort, Integer> {
 
 		Sort s = em.find(Sort.class, id);
 		em.close();
-		Context.destroy();
 		return s;
 	}
 
@@ -44,8 +42,6 @@ public class DAOSort implements DAO<Sort, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
-
 	}
 
 	public void delete(Sort object) {
@@ -59,8 +55,6 @@ public class DAOSort implements DAO<Sort, Integer> {
 		em.getTransaction().commit();
 
 		em.close();
-		Context.destroy();
-
 	}
 
 	public List<Sort> selectAll() {
@@ -72,7 +66,6 @@ public class DAOSort implements DAO<Sort, Integer> {
 		List<Sort> liste = query.getResultList();
 
 		em.close();
-		Context.destroy();
 		return liste;
 	}
 	

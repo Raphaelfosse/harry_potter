@@ -20,7 +20,6 @@ public class DAOProfesseur implements DAO<Professeur, Integer> {
 		em.getTransaction().commit();
 		
 		em.close();
-		Context.destroy();
 	}
 
 	public Professeur selectById(Integer id) {
@@ -30,7 +29,6 @@ public class DAOProfesseur implements DAO<Professeur, Integer> {
 		Professeur p= em.find(Professeur.class, id);
 		
 		em.close();
-		Context.destroy();
 		
 		return p;
 	}
@@ -46,7 +44,6 @@ public class DAOProfesseur implements DAO<Professeur, Integer> {
 		em.getTransaction().commit();
 		
 		em.close();
-		Context.destroy();
 	}
 
 	public void delete(Professeur object) {
@@ -60,7 +57,6 @@ public class DAOProfesseur implements DAO<Professeur, Integer> {
 		em.getTransaction().commit();
 		
 		em.close();
-		Context.destroy();
 	}
 
 	public List<Professeur> selectAll() {
@@ -72,7 +68,6 @@ public class DAOProfesseur implements DAO<Professeur, Integer> {
 		List<Professeur> liste = query.getResultList();
 		
 		em.close();
-		Context.destroy();
 		
 		return liste;
 	}

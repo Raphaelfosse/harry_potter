@@ -19,7 +19,6 @@ public class DAOMaison {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
 	}
 
 
@@ -29,7 +28,15 @@ public class DAOMaison {
 
 		Maison s = em.find(Maison.class, id);
 		em.close();
-		Context.getInstance().destroy();
+		return s;
+	}
+	
+	public Maison selectByName(String nom) {
+		EntityManagerFactory emf = Context.getInstance().getEmf();
+		EntityManager em = emf.createEntityManager();
+
+		Maison s = em.find(Maison.class, nom);
+		em.close();
 		return s;
 	}
 
@@ -43,8 +50,6 @@ public class DAOMaison {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
-
 	}
 
 	public void delete(Maison object) {
@@ -58,7 +63,6 @@ public class DAOMaison {
 
 		em.getTransaction().commit();
 		em.close();
-		Context.getInstance().destroy();
 	}
 
 
@@ -69,7 +73,6 @@ public class DAOMaison {
 		Query query = em.createQuery("from Maison");
 		List<Maison> liste = query.getResultList();
 		em.close();
-		Context.getInstance().destroy();
 		return liste;
 	}
 

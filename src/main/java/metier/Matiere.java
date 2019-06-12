@@ -25,6 +25,10 @@ public class Matiere {
 		this.sort = sort;
 		this.professeur = professeur;
 	}
+	
+	public Matiere(String nom) {
+		this.nom = nom;
+	}
 
 	public String getNom() {
 		return nom;
