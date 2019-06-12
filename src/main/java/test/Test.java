@@ -38,7 +38,7 @@ public class Test {
 		
 		Professeur p1 = new Professeur();
 		p1.setNom("Chourave");
-		p1.setMatiere(m1);
+		m1.setProfesseur(p1);
 		
 		daoP.insert(p1);
 		
@@ -48,6 +48,7 @@ public class Test {
 		
 		
 		Eleve e1 = new Eleve("Granger", "Hermione", 14);
+		e1.setMaison(ma1);
 		
 		daoE.insert(e1);
 		
