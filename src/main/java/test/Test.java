@@ -44,7 +44,9 @@ public class Test {
 		
 		Maison ma1 = new Maison();
 		ma1.setNom("Griffondor");
+		ma1.setProfesseur(p1);
 		daoMa.insert(ma1);
+
 		
 		
 		Eleve e1 = new Eleve("Granger", "Hermione", 14);
