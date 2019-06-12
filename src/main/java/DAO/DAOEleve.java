@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import application.Context;
-import metier.Eleve;
+import metier.*;
 
 public class DAOEleve implements DAO<Eleve, Integer> {
 
@@ -73,6 +73,19 @@ public class DAOEleve implements DAO<Eleve, Integer> {
 
 		em.close();
 		Context.destroy();
+		return liste;
+	}
+	
+	public List<Eleve> selectAllWithMatiere() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("maBase");
+		EntityManager em = emf.createEntityManager();
+		
+		
+		Query query = em.createNamedQuery("Eleve.findWithMatiere", Eleve.class);
+		List<Eleve> liste = query.getResultList(); 
+		
+		em.close();
+		Context.getInstance().destroy();
 		return liste;
 	}
 	

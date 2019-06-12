@@ -50,4 +50,10 @@ public class Matiere {
 		this.professeur = professeur;
 	}
 
+	@Override
+	public String toString() {
+		return  nom ;
+	}
+	
+	
 }
